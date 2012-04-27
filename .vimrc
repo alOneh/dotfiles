@@ -25,8 +25,9 @@ set number
 set modelines=1
 set hlsearch
 
-# Disable swap files
-set noswapfileset noswapfileset noswapfileset noswapfileset ruler
+" Disable swap files
+set noswapfile
+set ruler
 set laststatus=2
 set statusline=%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
