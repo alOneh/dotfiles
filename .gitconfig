@@ -1,0 +1,48 @@
+[user]
+	name = Hippolyte Alain
+	email = alain.hippolyte@gmail.com
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+	symfony = "!sh -c 'git clone git://github.com/symfony/symfony.git $1' -"
+	twig = "!sh -c 'git clone git://github.com/fabpot/Twig.git twig' -"
+	edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; subl `f`"
+  add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+[core]
+	editor = vim
+	excludesfile = /Users/rudeboy509/.gitignore
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[mergetool]
+	keepBackup = false
+[github]
+	user = al0neH
+	token = 320d868b36f7368e302cc39aa277a5e9
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
