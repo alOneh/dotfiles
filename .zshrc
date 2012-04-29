@@ -85,3 +85,9 @@ zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 
 export WORKON_HOME=~/.virtualenvs
+
+# Touche de commande
+bindkey "\e[H" beginning-of-line # Début
+bindkey "\e[F" end-of-line # Fin
+bindkey "\e[3~" delete-char
+bindkey "^R" history-incremental-search-backward # Rechercher
