@@ -1,0 +1,9 @@
+alias docker-gc="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc"
+alias docker-nginx-proxy="docker run -d -p 80:80 -p 443:443 -v /var/run/docker.sock:/tmp/docker.sock:ro --name nginx-proxy jwilder/nginx-proxy -restart always"
+alias finder="open -a Finder"
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+alias l='ls $LS_OPTIONS -lAhF'
+alias ll='ls $LS_OPTIONS -lhF'
+alias ls='ls $LS_OPTIONS -hF'
+alias phaudit="docker run -t -i -v `pwd`:/project jolicode/phaudit"
+alias untar="tar -xfvz"
