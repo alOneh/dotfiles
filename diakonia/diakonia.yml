@@ -1,0 +1,18 @@
+name: diakonia
+
+windows:
+  - 'api':
+      root: work/diakonia/diakonia.io/api
+      layout: main-horizontal
+      panes:
+        -
+  - 'front':
+      root: work/diakonia/diakonia.io/front
+      layout: main-horizontal
+      panes:
+        -
+  - 'app':
+      root: work/diakonia/diakonia.io/app
+      layout: main-horizontal
+      panes:
+        -
