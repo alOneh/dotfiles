@@ -1,68 +1,44 @@
-#Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+source $HOME/antigen.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="steeef"
+antigen bundle robbyrussell/oh-my-zsh lib/
+antigen bundle git
+antigen bundle composer
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle github
+antigen bundle go
+antigen bundle osx
+antigen bundle symfony2
+antigen bundle sublime
+antigen bundle z                            # autojump
+antigen bundle andrewferrier/fzf-z
+antigen bundle colored-man-pages            # adds colors to manpages
+antigen bundle colorize                     # cat with syntax highlight support
+antigen bundle cp                           # cp with progress bar
 
-# Example aliases
-alias zshconfig="vi ~/.zshrc"
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+antigen theme dracula
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git apache2-macports mysql-macports osx symfony2 svn vi-mode)
+antigen apply
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.zshenv
+source $HOME/.dotfiles/alias
 
-# MacPorts
-export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:$PATH
-export MANPATH=/opt/local/share/man:$MANPATH
-
-# Preferred editor for local and remote sessions
+export EDITOR='vim'
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/alain.hippolyte/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/alain.hippolyte/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
-# Alias
-alias ls='ls $LS_OPTIONS -hF'
-alias ll='ls $LS_OPTIONS -lhF'
-alias l='ls $LS_OPTIONS -lAhF'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias untar="tar -xfvz"
-alias www="cd $HOME/Sites/htdocs"
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
-alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
-alias pat='cd /opt/local/www/patchwork'
-alias eject='drutil tray eject'
-alias finder="open -a Finder"
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/alain.hippolyte/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/alain.hippolyte/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Fichier où est stocké l'historique
-export HISTFILE=$HOME/.history
+eval $(dinghy env)
 
-setopt hist_ignore_all_dups # ignore les doublons
-
-autoload -U compinit
-compinit
-
-# Amélioration auto complétion
-setopt prompt_subst # extension du prompt
-autoload -U colors && colors    # couleurs
-
- 
-zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
-zstyle ':completion:*:warnings' format '%BDésolé, pas de résultats pour : %d%b'
-zstyle ':completion:*' menu select=2
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-
-export WORKON_HOME=~/.virtualenvs
+return 0
