@@ -26,7 +26,7 @@ antigen theme dracula
 antigen apply
 
 source $HOME/.zshenv
-source $HOME/.dotfiles/alias
+source $HOME/.dotfiles/aliases
 
 export EDITOR='vim'
 if [[ -n $SSH_CONNECTION ]]; then
