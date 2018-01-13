@@ -5,3 +5,6 @@ Thumbs.db
 .idea
 *.log
 *.php~
+*.pyc
+*.sqlite
+supervisord.*
