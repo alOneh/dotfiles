@@ -1,0 +1,7 @@
+name: mw
+root: ~/projects/mobility-work
+
+windows:
+  - mw:
+      root: mobility-work
+      layout: main-vertical
