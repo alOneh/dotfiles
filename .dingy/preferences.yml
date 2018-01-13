@@ -1,0 +1,10 @@
+---
+:preferences:
+  :proxy_disabled: false
+  :fsevents_disabled: false
+  :create:
+    provider: virtualbox
+    disk: 80000
+  :machine_name: default
+  :unfs_disabled: false
+  :dns_disabled: false
