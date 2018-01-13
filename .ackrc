@@ -4,5 +4,9 @@ twig=.twig
 --type-add=html=.twig
 --type-add=php=.inc
 
---ignore-dir
+--ignore
 cache
+--ignore
+logs
+--ignore
+app/cache
