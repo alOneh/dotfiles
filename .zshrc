@@ -7,7 +7,6 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle github
 antigen bundle go
-antigen bundle osx
 antigen bundle symfony2
 antigen bundle sublime
 antigen bundle z                            # autojump
@@ -25,7 +24,7 @@ antigen theme dracula
 
 antigen apply
 
-source $HOME/.zshenv
+source $HOME/.dotfiles/zshenv
 source $HOME/.dotfiles/aliases
 
 export EDITOR='vim'
