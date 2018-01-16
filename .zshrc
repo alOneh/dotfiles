@@ -24,7 +24,7 @@ antigen theme dracula
 
 antigen apply
 
-source $HOME/.dotfiles/zshenv
+source $HOME/.dotfiles/.zshenv
 source $HOME/.dotfiles/aliases
 
 export EDITOR='vim'
