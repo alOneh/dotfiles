@@ -16,12 +16,12 @@ touch $DOTFILES/.private-gitconfig
 
 echo 'Create $HOME symlink'
 ln -sf $DOTFILES/.ackrc               ~/.ackrc
+ln -sf $DOTFILES/.dinghy              ~/.dinghy
 ln -sf $DOTFILES/.gitconfig           ~/.gitconfig
-ln -sf $DOTFILES/.gitglobalexclude    ~/.gitglobalexclude
-ln -sf $DOTFILES/.psqlrc              ~/.psqlrc
-ln -sf $DOTFILES/.private-gitconfig   ~/.private-gitconfig
 ln -sf $DOTFILES/.tmux.conf           ~/.tmux.conf
+ln -sf $DOTFILES/.tmuxinator          ~/.tmuxinator
 ln -sf $DOTFILES/.vimrc               ~/.vimrc
+ln -sf $DOTFILES/.zshrc               ~/.zshrc
 if [[ ! -d ~/.git-template ]]; then
     ln -sf $DOTFILES/git-template ~/.git-template
 fi
