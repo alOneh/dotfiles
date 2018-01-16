@@ -1,4 +1,4 @@
-source $HOME/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 
 antigen bundle robbyrussell/oh-my-zsh lib/
 antigen bundle git
