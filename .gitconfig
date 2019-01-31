@@ -32,3 +32,5 @@
     user = al0neH
 [push]
     default = tracking
+[credential]
+	helper = osxkeychain
