@@ -1,18 +1,14 @@
 name: diakonia
 
+root: ~/work/diakonia/diakonia.fr
+on_project_start: "make start"
+on_project_stop: "make stop"
+
 windows:
   - 'api':
-      root: work/diakonia/diakonia.io/api
+      root: ~/work/diakonia/diakonia.fr
       layout: main-horizontal
       panes:
         -
-  - 'front':
-      root: work/diakonia/diakonia.io/front
-      layout: main-horizontal
-      panes:
-        -
-  - 'app':
-      root: work/diakonia/diakonia.io/app
-      layout: main-horizontal
-      panes:
-        -
+  - 'webpack': yarn dev-server
+  - 'logs': docker-compose exec php tail -f var/log/dev.log

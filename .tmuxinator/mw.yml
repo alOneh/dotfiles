@@ -1,7 +1,9 @@
 name: mw
-root: ~/projects/mobility-work
+root: ~/work/mobility-work/mobility-work
+on_project_start: "make start"
+on_project_stop: "make stop"
 
 windows:
-  - mw:
-      root: mobility-work
+  - 'cmms - main':
       layout: main-vertical
+  - 'logs': docker-compose exec php tail -f var/logs/dev.log
