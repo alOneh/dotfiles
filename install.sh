@@ -18,6 +18,7 @@ echo 'Create $HOME symlink'
 ln -sf $DOTFILES/.ackrc               ~/.ackrc
 ln -sf $DOTFILES/.dinghy              ~/.dinghy
 ln -sf $DOTFILES/.gitconfig           ~/.gitconfig
+ln -sf $DOTFILES/.gitignore           ~/.gitglobalexclude
 ln -sf $DOTFILES/.tmux.conf           ~/.tmux.conf
 ln -sf $DOTFILES/.tmuxinator          ~/.tmuxinator
 ln -sf $DOTFILES/.vimrc               ~/.vimrc

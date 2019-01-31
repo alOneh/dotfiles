@@ -7,3 +7,4 @@ alias ll='ls $LS_OPTIONS -lhF'
 alias ls='ls $LS_OPTIONS -hF'
 alias phaudit="docker run -t -i -v `pwd`:/project jolicode/phaudit"
 alias untar="tar -xfvz"
+alias m="make"
